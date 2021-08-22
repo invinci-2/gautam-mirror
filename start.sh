@@ -15,5 +15,5 @@ pip3 -qq install --upgrade yt-dlp
 sed -n -i '/max-concurrent-downloads/q;p' /app/aria.conf
 tracker_list=$(curl -Ns https://raw.githubusercontent.com/XIU2/TrackersListCollection/master/all.txt --next https://ngosang.github.io/trackerslist/trackers_all_http.txt --next https://newtrackon.com/api/all --next https://raw.githubusercontent.com/DeSireFire/animeTrackerList/master/AT_all.txt | awk '$1' | tr '\n\n' ',')
 echo -e "\nmax-concurrent-downloads=5\nbt-tracker=$tracker_list" >> /app/aria.conf
-aria2c --conf-path=/app/aria.conf
+aria2c --conf-path=/app/aria.sh
 python3 -m bot
