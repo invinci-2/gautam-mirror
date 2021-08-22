@@ -7,7 +7,7 @@ elif [[ -f "/app/.local/lib/python3.9/site-packages/mega/libmega.so" ]]; then
 	ln -s /app/.local/lib/python3.9/site-packages/mega/libmega.so /usr/local/lib/libmega.so.$LIB_VERSION
 else
 	echo "Mega Shared Object not found Exiting"
-	exit 1
+	
 fi
 
 
